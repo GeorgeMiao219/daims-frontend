@@ -16,13 +16,14 @@
         @click="window.location.replace('/' + item.mapping_str)"
       >
         <el-row :gutter="20">
-          <el-col :span="11">
-            <a class="url">{{item.url}}</a>
-          </el-col>
-          <el-col :span="7">
+          <el-col :xs="20" :span="10">
             <a class="daims-url">https://daims.app/{{item.mapping_str}}</a>
           </el-col>
-          <el-col :span="6">
+          <el-col :span="11" class="hidden-xs-only">
+            <a class="url">{{item.url}}</a>
+          </el-col>
+          <el-col :span="4">
+            <a class="hidden-sm-and-down">Token: </a>
             <a class="token">{{item.manage_token}}</a>
           </el-col>
         </el-row>
@@ -33,7 +34,6 @@
 
 <script>
 import { get, set } from "@/utils/cookie.js";
-import moduleName from 'module';
 const API = "http://127.0.0.1:8000";
 export default {
   data: function() {
@@ -56,15 +56,17 @@ export default {
       let url = this.form.url;
       try {
         var data = (await this.$a.post(`${API}/?url=${url}`)).data;
+        if (!data.mapping_str) throw data.Reason
         this.addRecordToCookie(data);
         this.$message({
           message: 'Success',
           type: 'success'
         });
+
       } catch (e) {
         this.err(`Failed Creating Record: ${e}`);
       }
-      
+      this.form.url = "https://"
     },
     validate() {
       return /https?:\/\/.+\..{2,}/.test(this.form.url);
@@ -86,6 +88,9 @@ export default {
     jump(str) {
       let url = `https://daims.app/${str}`
       window.location.href = url
+    },
+    err(msg) {
+      this.$message({ message: msg, type: "warning" });
     }
   }
 };
@@ -112,7 +117,7 @@ a {
   cursor: pointer;
   background: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgba(26,26,26,.1);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease;
 }
 
 .records:hover {
@@ -120,11 +125,16 @@ a {
 }
 
 .el-row {
-  min-height: 50px;
+  min-height: 65px;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0 20px;
+}
+
+.el-col {
+  text-align: left;
 }
 
 .daims-url {
@@ -134,7 +144,6 @@ a {
 .el-input-group{
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
-
 }
 
 #text-input {

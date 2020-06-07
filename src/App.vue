@@ -42,13 +42,14 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.loli.net/css2?family=Roboto:wght@300&display=auto');
 html, body{
   margin: 0;
   padding: 0;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto script=latin rev=1", "sans-serif" !important; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

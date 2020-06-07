@@ -20,17 +20,19 @@ export default {
 }
 </script>
 <style>
+
 #header-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 60px;
   width: 100%;
   margin: 30px 0 50px;
 }
 #header-wrapper a {
-  font-size: 40px
+  font-size: 40px;
+  font-family: "Roboto"
 }
 #header-wrapper i {
   font-size: 40px

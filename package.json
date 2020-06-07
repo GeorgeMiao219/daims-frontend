@@ -9,7 +9,8 @@
     "start": "npm run build && node app.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "backend": "D:/Work/env/FastAPI/Scripts/python D:/Work/Projects/daimsmemory/run.py"
   },
   "dependencies": {
     "axios": "^0.19.2",
