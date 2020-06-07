@@ -3,8 +3,10 @@ const path = require('path')
 const fs = require('fs')
 const history = require('connect-history-api-fallback');
 const axios = require('axios')
+const compress = require('compression')
 const app = express()
 
+app.use(compress())
 app.get(/^\/[a-zA-Z0-9]{4}$/, async (req, res) => {
   console.log("Redirecting")
   console.log(req.url)

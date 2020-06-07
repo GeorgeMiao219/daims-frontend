@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/display.css">
     <router-view style="width: 100%"/>
   </div>
 </template>
@@ -49,7 +51,7 @@ html, body{
 }
 
 #app {
-  font-family: "Roboto script=latin rev=1", "sans-serif" !important; 
+  font-family: "Roboto", "sans-serif" !important; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
