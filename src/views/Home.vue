@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div id="header-wrapper">
+      <i class="el-icon-link"></i>
+      <a>DAIMS</a>
+    </div>
+    <create />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import create from '@/components/create.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    create
   }
 }
 </script>
+<style>
+#header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  margin: 30px 0 50px;
+}
+#header-wrapper a {
+  font-size: 40px
+}
+#header-wrapper i {
+  font-size: 40px
+}
+</style>
