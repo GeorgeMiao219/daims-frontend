@@ -10,7 +10,7 @@ app.use(compress())
 app.get(/^\/[a-zA-Z0-9]{4}$/, async (req, res) => {
   console.log("Redirecting")
   console.log(req.url)
-  let r = await axios.get(`http://localhost:8000${req.path}`).catch((e) => {return e})
+  let r = await axios.get(`https://url.api.miao.dev${req.path}`).catch((e) => {return e})
   if (!r.data) {
     res.redirect("/")
     return
