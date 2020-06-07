@@ -7,9 +7,11 @@
 
 <script>
 import manage from '@/components/manage.vue';
+import {PageHeader} from 'element-ui'
 export default {
   components: {
-    manage
+    manage,
+    'el-page-header': PageHeader
   },
   methods: {
     goBack() {

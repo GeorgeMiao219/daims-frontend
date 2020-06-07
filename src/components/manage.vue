@@ -30,8 +30,10 @@
 </template>
 
 <script>
+import {Table, TableColumn} from 'element-ui';
 const API = "http://127.0.0.1:8000";
 export default {
+  components: {'el-table': Table, 'el-table-column': TableColumn},
   data() {
     return {
       tableData: [],
