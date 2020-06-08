@@ -9,6 +9,7 @@ Vue.prototype.window = window
 Vue.prototype.$alert = MessageBox.alert;
 Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$message = Message;
+Vue.prototype.$confirm = MessageBox.confirm;
 Vue.prototype.$a = axios;
 Vue.use(Input)
 Vue.use(Button)

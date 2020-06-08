@@ -10,7 +10,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --report",
     "lint": "vue-cli-service lint",
-    "backend": "D:/Work/env/FastAPI/Scripts/python D:/Work/Projects/daimsmemory/run.py"
+    "backend": "D:/Work/env/FastAPI/Scripts/python D:/Work/Projects/daimsmemory/run.py",
+    "docker": "npm run build && docker build -t daims . && docker push georgemiao/daims:latest"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -20,6 +21,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "express": "^4.17.1",
+    "silly-datetime": "^0.1.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

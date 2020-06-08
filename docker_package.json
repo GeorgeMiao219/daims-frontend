@@ -1,0 +1,17 @@
+{
+  "name": "daims",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "compression": "^1.7.4",
+    "connect-history-api-fallback": "^1.6.0",
+    "silly-datetime": "^0.1.2",
+    "express": "^4.17.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
