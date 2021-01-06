@@ -14,7 +14,7 @@
     "docker": "npm run build && docker build -t daims . && docker push georgemiao/daims:latest"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clipboard": "^2.0.6",
     "compression": "^1.7.4",
     "connect-history-api-fallback": "^1.6.0",
